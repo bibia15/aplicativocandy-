@@ -4,7 +4,7 @@ const totalElement = document.getElementById('total');
 let total = 0;
 
 produtos.forEach(produto => {
-    const button = produto.querySelector('button');
+    const button = produto.querySelector('.adicionar');
     button.addEventListener('click', () => {
         const nome = produto.getAttribute('data-nome');
         const preco = parseFloat(produto.getAttribute('data-preco'));
@@ -21,8 +21,12 @@ produtos.forEach(produto => {
 });
 
 document.getElementById('finalizar-compra').addEventListener('click', () => {
-    alert('Compra finalizada! Obrigado pela sua compra!');
-    listaCarrinho.innerHTML = '';
-    total = 0;
-    totalElement.textContent = `Total: R$ 0.00`;
+    if (total > 0) {
+        alert('Compra finalizada! Obrigado pela sua compra!');
+        listaCarrinho.innerHTML = '';
+        total = 0;
+        totalElement.textContent = `Total: R$ 0.00`;
+    } else {
+        alert('Seu carrinho está vazio.');
+    }
 });
