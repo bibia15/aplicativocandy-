@@ -2,6 +2,8 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
     color: #333;
+    margin: 0;
+    padding: 0;
 }
 
 header {
@@ -10,9 +12,16 @@ header {
     padding: 20px;
 }
 
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+}
+
 main {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
     margin: 20px;
 }
 
@@ -22,12 +31,42 @@ main {
     padding: 10px;
     background-color: #fff;
     margin: 10px;
+    width: 200px;
+    text-align: center;
 }
 
-#carrinho {
+#carrinho, #checkout {
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 10px;
     background-color: #fff;
+    margin-top: 20px;
+    width: 300px;
 }
 
+#form-checkout {
+    display: flex;
+    flex-direction: column;
+}
+
+#form-checkout label {
+    margin-top: 10px;
+}
+
+#form-checkout input {
+    padding: 8px;
+    margin-top: 5px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e6b800;
+}
