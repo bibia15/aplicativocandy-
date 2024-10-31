@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venda de Brigadeiros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Brigadeiros da Vovó</h1>
+    </header>
+    <main>
+        <section id="produtos">
+            <h2>Nosso Cardápio</h2>
+            <div class="produto" data-nome="Brigadeiro Tradicional" data-preco="2.50">
+                <h3>Brigadeiro Tradicional</h3>
+                <p>Delicioso brigadeiro de chocolate.</p>
+                <button>Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto" data-nome="Brigadeiro Gourmet" data-preco="3.00">
+                <h3>Brigadeiro Gourmet</h3>
+                <p>Brigadeiro com chocolate belga.</p>
+                <button>Adicionar ao Carrinho</button>
+            </div>
+            <!-- Adicione mais produtos conforme necessário -->
+        </section>
+        <section id="carrinho">
+            <h2>Carrinho</h2>
+            <ul id="lista-carrinho"></ul>
+            <p id="total">Total: R$ 0.00</p>
+            <button id="finalizar-compra">Finalizar Compra</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
