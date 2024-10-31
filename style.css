@@ -21,6 +21,7 @@ main {
     border-radius: 5px;
     padding: 10px;
     background-color: #fff;
+    margin: 10px;
 }
 
 #carrinho {
@@ -29,3 +30,4 @@ main {
     padding: 10px;
     background-color: #fff;
 }
+
