@@ -22,11 +22,19 @@ produtos.forEach(produto => {
 
 document.getElementById('finalizar-compra').addEventListener('click', () => {
     if (total > 0) {
-        alert('Compra finalizada! Obrigado pela sua compra!');
-        listaCarrinho.innerHTML = '';
-        total = 0;
-        totalElement.textContent = `Total: R$ 0.00`;
+        document.getElementById('carrinho').style.display = 'none';
+        document.getElementById('checkout').style.display = 'block';
     } else {
         alert('Seu carrinho está vazio.');
     }
+});
+
+document.getElementById('form-checkout').addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Compra finalizada! Obrigado pela sua compra!');
+    listaCarrinho.innerHTML = '';
+    total = 0;
+    totalElement.textContent = `Total: R$ 0.00`;
+    document.getElementById('checkout').style.display = 'none';
+    document.getElementById('carrinho').style.display = 'block';
 });
